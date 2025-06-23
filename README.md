@@ -1,61 +1,98 @@
-# 🎥 Apresentação da Equipe Devflow e Instalação de Software  
-**🔗 Link do Vídeo:** [https://youtu.be/uV6GRuS7C3M](https://youtu.be/uV6GRuS7C3M)
+# 🎥 Apresentação da Equipe Devflow e Instalação de Software
+🔗 [Link do Vídeo](https://youtu.be/uV6GRuS7C3M)
 
 ## 🧠 Introdução ao Projeto
+A equipe Devflow é composta por alunos do primeiro semestre do curso de Desenvolvimento de Software Multiplataforma.
+Nosso objetivo é relatar as atividades realizadas no laboratório 103, incluindo a instalação de sistemas e softwares essenciais para o desenvolvimento.
 
-### 🎯 Contexto e Objetivos
--  A equipe Devflow é composta por alunos do primeiro semestre de desenvolvimento de software multiplataforma.
--  O objetivo principal é apresentar as atividades realizadas no laboratório 103, incluindo a instalação de sistemas e softwares essenciais para o desenvolvimento.
--  Cada grupo foi responsável por instalar o Linux em quatro máquinas.
+## 💿 1. Instalação do Linux
+Instalamos o Linux em quatro máquinas do laboratório. Utilizamos uma distribuição baseada em Debian (como o Ubuntu).
+Etapas:
 
-### 💿 Processo de Instalação do Linux
-- 🛠️ A instalação foi um passo inicial crucial para o desenvolvimento dos projetos.
+- Criar pendrive bootável com Rufus (Windows) ou dd (Linux).
 
-## 💻 Instalação do VS Code
+- Iniciar o computador pelo pendrive.
 
-### 📥 Método de Instalação
--  O VS Code pode ser instalado de forma semelhante ao Windows, sem a necessidade de linha de comando.
--  A instalação é feita através de um download direto, facilitando o processo para os usuários.
+- Seguir o instalador gráfico até a finalização.
 
-### 👨‍🏫 Demonstração Prática
--  A equipe demonstrou como acessar o site do VS Code e realizar o download.
--  O procedimento é simples: basta clicar em “instalar” e seguir as instruções.
+## 💻 2. Instalação do VS Code
 
-## 🐘 Instalação do PostgreSQL
+A instalação do VS Code foi feita **via interface gráfica**, sem necessidade de utilizar o terminal.
 
-### 🔁 Diferenças em Relação ao Windows
--  A instalação do PostgreSQL requer o uso do terminal no Linux, diferentemente do Windows.
--  É necessário executar uma série de comandos para completar a instalação.
+### 📥 Etapas realizadas:
 
-### 🧪 Comandos e Testes
--  A equipe apresentou os comandos necessários para a instalação e configuração do PostgreSQL.
+- Acessamos o site oficial do Visual Studio Code:  
+   [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
-## 🟢 Instalação do Node.js
+- Selecionamos a versão `.deb` para distribuições baseadas em Debian (como o Ubuntu).
 
-### ⚙️ Processo de Instalação
--  A instalação do Node.js também é realizada via linha de comando, semelhante ao PostgreSQL.
--  A equipe mostrou como verificar a versão instalada utilizando o comando `node -v`.
+- Após o download, **abrimos o arquivo com o instalador padrão do sistema**.
 
-### 🌐 Acesso e Download
--  Para instalar o Node.js, é necessário acessar o site oficial e escolher a versão para Linux.
--  A equipe destacou a importância de seguir as instruções de instalação corretamente.
+- O sistema cuidou da instalação automaticamente.
 
-## 🌐 Apresentação do Projeto da ABP
+- Após a conclusão, o VS Code ficou disponível no menu de aplicações.
 
-### 🚀 Deploy do Frontend e Backend
-- 🧩 O projeto da ABP foi desenvolvido com o frontend e backend já implantados, permitindo acesso direto via site.
-- 🛠️ A equipe não precisou abrir o projeto pelo VS Code, facilitando a apresentação.
+## 🐘 3. Instalação do PostgreSQL
+O PostgreSQL foi instalado via terminal. Abaixo os comandos utilizados.
 
-### 📚 Funcionalidades do Projeto
--  O site apresenta informações sobre os cursos oferecidos na FATEC de Jacareí.
--  Os usuários podem consultar as grades curriculares e escolher o período desejado.
+🔧 Comandos:
+```bash
+# Atualizar os pacotes:
+sudo apt update
+
+# Instalar PostgreSQL e o cliente:
+sudo apt install postgresql postgresql-contrib
+
+# Verificar o status do serviço:
+sudo systemctl status postgresql
+
+# Acessar como usuário postgres:
+sudo -i -u postgres
+psql
+
+# Criar novo usuário (exemplo):
+CREATE USER meuusuario WITH PASSWORD 'minhasenha';
+```
+
+## 🟢 4. Instalação do Node.js
+Instalamos o Node.js diretamente do repositório oficial NodeSource para garantir a versão LTS.
+
+⚙️ Comandos:
+```bash
+# Atualizar pacotes:
+sudo apt update
+
+# Instalar curl:
+sudo apt install curl
+
+# Baixar e executar o script de setup do Node.js:
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+
+# Instalar Node.js:
+sudo apt install -y nodejs
+
+# Verificar versões:
+node -v
+npm -v
+```
+
+## 🌐 5. Deploy do Projeto da ABP
+O projeto da ABP foi apresentado com frontend e backend já implantados.
+O site está disponível online, o que facilitou a apresentação sem precisar abrir o código no VS Code.
+
+## 📚 Funcionalidades do Site
+Consulta dos cursos da FATEC Jacareí
+
+Visualização das grades curriculares
+
+Filtro por período letivo
 
 ## ✅ Conclusão
+A equipe concluiu a instalação de ferramentas fundamentais para o desenvolvimento de software.
+A maioria das ferramentas foi instalada via terminal, exceto o VS Code, que teve um processo gráfico simplificado.
+A experiência no laboratório 103 foi essencial para nosso aprendizado prático.
 
-### 📌 Resumo das Atividades
--  A equipe concluiu a instalação de várias ferramentas essenciais para o desenvolvimento de software.
--  A maioria das instalações foi realizada via linha de comando, exceto o VS Code, que teve um processo simplificado.
--  A experiência no laboratório 103 foi enriquecedora, proporcionando aprendizado prático sobre instalação e configuração de softwares.
+## 🗣️ Considerações Finais
+A equipe Devflow está satisfeita com os resultados alcançados e com o funcionamento dos sistemas instalados.
+Continuamos motivados a aprimorar nossas habilidades e enfrentar os próximos desafios do curso com entusiasmo.
 
-### 🗣️ Considerações Finais
--  A equipe expressou satisfação com os resultados alcançados e a funcionalidade dos sistemas instalados.

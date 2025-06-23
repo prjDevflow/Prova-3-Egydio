@@ -54,6 +54,28 @@ psql
 CREATE USER meuusuario WITH PASSWORD 'minhasenha';
 ```
 
+## 🐘 3.1 Instalação do pgAdmin
+
+O **pgAdmin** é uma ferramenta gráfica para gerenciar bancos de dados PostgreSQL, facilitando a visualização, criação de tabelas, execução de queries e muito mais.
+
+### 📥 Etapas de instalação:
+
+1. Adicionamos o repositório oficial do pgAdmin 4:
+
+```bash
+# Instalar dependências:
+sudo apt install curl ca-certificates gnupg
+
+# Importar a chave pública do repositório:
+curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/pgadmin-keyring.gpg
+
+# Adicionar o repositório:
+echo "deb [signed-by=/usr/share/keyrings/pgadmin-keyring.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" | sudo tee /etc/apt/sources.list.d/pgadmin4.list
+
+# Atualizar os pacotes:
+sudo apt update
+```
+
 ## 🟢 4. Instalação do Node.js
 Instalamos o Node.js diretamente do repositório oficial NodeSource para garantir a versão LTS.
 
